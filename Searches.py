@@ -61,3 +61,42 @@ def search(lstt,target):
     if(lstt[index]==target):
         return index+1
 
+print("enter 1. Binary Search  \n 2. Hash search \n 3. linked list search")
+
+ch = int(input("choose any"))
+if ( ch ==1):
+    start = 0
+    end = a-1
+    count = 0
+    while start <= end:
+        count = count +1
+        mid = int((start+end)/2)
+        if s == lst[mid]:
+            print ("element found at ", mid+1)
+            break
+        elif s> lst[mid] :
+            start = mid+1
+        else:
+            end = mid-1
+        if count == a-1:
+            print("element not found :(")
+
+elif (ch==2):
+    for i in range(0,a):
+        if (hash(lst[i])==0) :
+            print("value not inserted")
+            break
+    print("the value u r searching is found at ",search(l,s)," position")
+elif(ch==3):
+    llist = LinkedList()
+    def link_search(lst, target):
+        for i in range(0, len(lst)):
+            llist.push(lst[i])
+
+        if llist.search(target):
+            print("found at ",(len(lst)-llist.search(target) +1), " position")
+        else:
+            print("element not No")
+    link_search(lst, s)
+else:
+    print("please choose a valid option")
