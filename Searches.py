@@ -1,4 +1,4 @@
-Print("Welcome to Searching Techniques by Bargav , Phani and Saketh")
+print("Welcome to Searching Techniques by Bhargav , Phani and Saketh")
 a = int(input("enter the no. of elements "))
 lst =[]
 l= [0]*a
